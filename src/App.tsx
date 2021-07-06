@@ -6,12 +6,12 @@ import store from "./redux/index";
 import styled from "styled-components";
 
 import Navbar from "./components/Navbar/Navbar";
-import Main from "./components/Main";
+import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
 
 const BackgroundWrap = styled.div`
   width: 100vw;
-  height: 100vh;
+  /* height: 100; */
   background-color: #1b1b1b;
 `;
 
