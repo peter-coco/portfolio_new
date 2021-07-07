@@ -4,8 +4,9 @@ import mainLogo from "../../image/main-logo.png";
 
 const MainHeadWrap = styled.div`
   width: 100%;
-  max-width: 1000px;
-  margin: 50px auto;
+  max-width: 830px;
+  margin: 0px auto;
+  margin-top: 208px;
   display: flex;
   flex-direction: column;
   justify-content: center;
