@@ -6,7 +6,7 @@ import navbarLogo from "../../image/navbar-logo.png";
 const NavbarWrap = styled.div`
   width: 100%;
   height: 80px;
-  max-width: 1000px;
+  max-width: 830px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

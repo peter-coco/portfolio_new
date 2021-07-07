@@ -14,7 +14,7 @@ const MainSkillsWrap = styled.div`
 `;
 
 const MainSkillsTitleWrap = styled.div`
-  width: 215px;
+  width: 240px;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ const MainSkillsTitle = styled.div`
   font-size: 40px;
 `;
 const MainSkillsTitleBar = styled.div`
-  width: 240px;
+  width: 100%;
   height: 8px;
   background-color: #c4c4c4;
 `;
