@@ -28,6 +28,8 @@ const MainHeadTitle = styled.div`
   font-size: 18px;
   color: #f2c94c;
   margin-bottom: 30px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const MainHeadBtnWrap = styled.div`
   font-size: 15px;
@@ -39,6 +41,8 @@ const MainHeadBtnWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 
 const MainHeadNotionResume = styled.a`

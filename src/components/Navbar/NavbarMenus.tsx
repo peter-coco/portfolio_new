@@ -12,6 +12,8 @@ const NavbarMenusWrap = styled.div`
 const NavbarMenu = styled.div`
   font-size: 20px;
   color: white;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 
 const NavbarMenus = () => {

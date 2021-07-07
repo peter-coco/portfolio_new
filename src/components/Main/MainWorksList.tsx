@@ -33,15 +33,21 @@ const WorkText = styled.div`
 const WorkTitle = styled.div`
   font-size: 25px;
   margin-bottom: 15px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const WorkSummary = styled.div`
   font-size: 20px;
   margin-bottom: 30px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const WorkSubscription = styled.div`
   font-size: 15px;
   margin-bottom: 30px;
   line-height: 140%;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const WorkLinks = styled.div`
   display: flex;

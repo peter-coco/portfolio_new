@@ -28,10 +28,14 @@ const FooterLinkImg = styled.img`
 const FooterEmail = styled.div`
   color: white;
   font-size: 13px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const FooterRight = styled.div`
   color: white;
   font-size: 15px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 
 const Footer = () => {

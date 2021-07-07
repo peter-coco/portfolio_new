@@ -27,6 +27,8 @@ const MainCarrerTitleWrap = styled.div`
 const MainCarrerTitle = styled.div`
   color: #f2c94c;
   font-size: 40px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const MainCarrerTitleBar = styled.div`
   width: 100%;

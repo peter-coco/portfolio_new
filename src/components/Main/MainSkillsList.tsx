@@ -32,6 +32,8 @@ const MainSkillTitleWrap = styled.div`
 const MainSkillTitle = styled.div`
   color: #f2c94c;
   font-size: 18px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const MainSkillTitleBar = styled.div`
   width: 150px;

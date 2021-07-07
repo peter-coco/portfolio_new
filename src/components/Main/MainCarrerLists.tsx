@@ -15,15 +15,21 @@ const CarrerList = styled.div`
 const CarrerCompany = styled.div`
   font-size: 25px;
   margin-bottom: 10px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const CarrerSummary = styled.div`
   font-size: 15px;
   margin-bottom: 15px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const CarrerSubscriptionWrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 13px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 const CarrerPositionNDuration = styled.div`
   line-height: 170%;

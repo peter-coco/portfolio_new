@@ -25,6 +25,8 @@ const MainAboutTitleWrap = styled.div`
 const MainAboutTitle = styled.div`
   color: #f2c94c;
   font-size: 40px;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
 `;
 const MainAboutTitlebar = styled.div`
   width: 240px;
@@ -35,6 +37,9 @@ const MainAboutTitlebar = styled.div`
 const MainAboutTextWrap = styled.div`
   color: white;
   font-size: 18px;
+
+  font-family: "Noto Sans KR";
+  font-weight: 400;
 `;
 
 const MainAbout = () => {

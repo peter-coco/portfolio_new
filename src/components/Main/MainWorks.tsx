@@ -25,6 +25,8 @@ const MainWorksTitleWrap = styled.div`
 const MainWorksTitle = styled.div`
   color: #f2c94c;
   font-size: 40px;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
 `;
 const MainWorksTitleBar = styled.div`
   width: 100%;
