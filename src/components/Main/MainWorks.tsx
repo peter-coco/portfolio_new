@@ -1,9 +1,46 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import MainWorksList from "./MainWroksList";
 
-const MainWorksWrap = styled.div``;
+const MainWorksWrap = styled.div`
+  width: 100%;
+  max-width: 830px;
+  margin: 0px auto;
+  margin-top: 208px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const MainWorksTitleWrap = styled.div`
+  width: 240px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+`;
+const MainWorksTitle = styled.div`
+  color: #f2c94c;
+  font-size: 40px;
+`;
+const MainWorksTitleBar = styled.div`
+  width: 100%;
+  height: 8px;
+  background-color: #c4c4c4;
+`;
 
 const MainWorks = () => {
-  return <MainWorksWrap></MainWorksWrap>;
+  return (
+    <MainWorksWrap>
+      <MainWorksTitleWrap>
+        <MainWorksTitle>WORKS</MainWorksTitle>
+        <MainWorksTitleBar />
+      </MainWorksTitleWrap>
+      <MainWorksList />
+    </MainWorksWrap>
+  );
 };
 export default MainWorks;
