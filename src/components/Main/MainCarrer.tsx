@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import MainWorksList from "./MainWorksList";
+import MainCarrerLists from "./MainCarrerLists";
 
-const MainWorksWrap = styled.div`
+const MainCarrerWrap = styled.div`
   width: 100%;
   max-width: 830px;
   margin: 0px auto;
@@ -12,7 +12,8 @@ const MainWorksWrap = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const MainWorksTitleWrap = styled.div`
+
+const MainCarrerTitleWrap = styled.div`
   width: 240px;
   height: 70px;
   display: flex;
@@ -22,25 +23,26 @@ const MainWorksTitleWrap = styled.div`
   justify-content: center;
   margin-bottom: 64px;
 `;
-const MainWorksTitle = styled.div`
+
+const MainCarrerTitle = styled.div`
   color: #f2c94c;
   font-size: 40px;
 `;
-const MainWorksTitleBar = styled.div`
+const MainCarrerTitleBar = styled.div`
   width: 100%;
   height: 8px;
   background-color: #c4c4c4;
 `;
 
-const MainWorks = () => {
+const MainCarrer = () => {
   return (
-    <MainWorksWrap>
-      <MainWorksTitleWrap>
-        <MainWorksTitle>WORKS</MainWorksTitle>
-        <MainWorksTitleBar />
-      </MainWorksTitleWrap>
-      <MainWorksList />
-    </MainWorksWrap>
+    <MainCarrerWrap>
+      <MainCarrerTitleWrap>
+        <MainCarrerTitle>CARRER</MainCarrerTitle>
+        <MainCarrerTitleBar></MainCarrerTitleBar>
+      </MainCarrerTitleWrap>
+      <MainCarrerLists />
+    </MainCarrerWrap>
   );
 };
-export default MainWorks;
+export default MainCarrer;
