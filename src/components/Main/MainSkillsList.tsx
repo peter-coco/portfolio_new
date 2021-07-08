@@ -3,21 +3,22 @@ import styled from "styled-components";
 
 const MainSkillsListsWrap = styled.div`
   width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+
   display: flex;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-template-rows: 1fr 1fr; */
-  /* grid-template-columns: repeat(auto-fill, minmax(20%, auto));
-  grid-template-rows: repeat(auto-fill, minmax(50%, auto)); */
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
   gap: 20px;
 `;
 const MainSkillListWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 140px;
+  width: 80%;
+  max-width: 240px;
 `;
 const MainSkillTitleWrap = styled.div`
   width: 100%;
@@ -51,6 +52,12 @@ const SkillListWrap = styled.div`
   gap: 20px;
   background-color: #fff;
   border-radius: 10px;
+
+  @media (max-width: 1000px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+  }
 `;
 const Skill = styled.img`
   width: 60px;
@@ -103,7 +110,7 @@ const skillList = [
       "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566912109/noticon/puksfce6wca36hes1vom.png",
       "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567008394/noticon/ohybolu4ensol1gzqas1.png",
       "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566557331/noticon/d5hqar2idkoefh6fjtpu.png",
-      "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566919941/noticon/bwij1af50rjj0fiyjtci.png",
+      "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567749614/noticon/zgdaxpaif5ojeduonygb.png",
       "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1568851518/noticon/lwj3hr9v1yoheimtwc1w.png",
     ],
   ],

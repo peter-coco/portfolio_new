@@ -3,14 +3,20 @@ import styled from "styled-components";
 
 const MainCarrerListsWrap = styled.div`
   width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    max-width: 670px;
+  }
   gap: 60px;
 `;
 const CarrerList = styled.div`
-  color: white;
+  /* color: white; */
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 `;
 const CarrerCompany = styled.div`
   font-size: 25px;

@@ -7,6 +7,8 @@ const MainCarrerWrap = styled.div`
   max-width: 830px;
   margin: 0px auto;
   margin-top: 208px;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;

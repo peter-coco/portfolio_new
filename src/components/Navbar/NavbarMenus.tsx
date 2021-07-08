@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { GlobalState } from "../../redux/reducer";
 
 const NavbarMenusWrap = styled.div`
   width: 500px;
@@ -7,6 +9,11 @@ const NavbarMenusWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 10px;
+    height: 200px;
+  }
 `;
 
 const NavbarMenu = styled.div`
@@ -17,8 +24,23 @@ const NavbarMenu = styled.div`
 `;
 
 const NavbarMenus = () => {
+  const skillsRef = useSelector<GlobalState, typeof useRef>(
+    (state) => state.skillsRef
+  );
+
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+
+  // 클릭하면 이동시키는 로직
+  const handleIndexClick = () =>
+    useLayoutEffect(() => {
+      h1Ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+
   return (
-    <NavbarMenusWrap>
+    <NavbarMenusWrap ref={h1Ref}>
       {/* <NavbarMenu>HOME</NavbarMenu> */}
       <NavbarMenu>ABOUT</NavbarMenu>
       <NavbarMenu>SKILLS</NavbarMenu>

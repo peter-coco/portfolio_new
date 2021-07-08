@@ -5,8 +5,7 @@ import project1 from "../../image/projects3.png";
 
 const MainWorksListWrap = styled.div`
   width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,17 +14,32 @@ const MainWorksListWrap = styled.div`
 const WorksList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+
+  background-color: #ffffffed;
+  /* opacity: 0.9; */
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 `;
 const WorkImages = styled.div`
   width: 350px;
   height: 350px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    /* height: 280px; */
+    margin-bottom: 20px;
+  }
 `;
 const WorkImage = styled.img`
   width: 100%;
   height: 100%;
 `;
 const WorkText = styled.div`
-  color: white;
+  /* color: white; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,12 +49,20 @@ const WorkTitle = styled.div`
   margin-bottom: 15px;
   font-family: "Noto Sans KR";
   font-weight: 400;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
 `;
 const WorkSummary = styled.div`
   font-size: 20px;
   margin-bottom: 30px;
   font-family: "Noto Sans KR";
   font-weight: 400;
+
+  @media (max-width: 1000px) {
+    font-size: 17px;
+  }
 `;
 const WorkSubscription = styled.div`
   font-size: 15px;
@@ -48,6 +70,10 @@ const WorkSubscription = styled.div`
   line-height: 140%;
   font-family: "Noto Sans KR";
   font-weight: 400;
+
+  @media (max-width: 1000px) {
+    font-size: 13px;
+  }
 `;
 const WorkLinks = styled.div`
   display: flex;

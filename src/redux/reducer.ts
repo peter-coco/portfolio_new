@@ -1,8 +1,13 @@
+import { useRef } from "react";
 import Actions from "./actions";
 
-export interface GlobalState {}
+export interface GlobalState {
+  skillsRef: typeof useRef;
+}
 
-const initialState: GlobalState = {};
+const initialState: GlobalState = {
+  skillsRef: useRef,
+};
 
 function reducer(
   state: GlobalState = initialState,

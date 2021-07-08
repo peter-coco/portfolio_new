@@ -6,10 +6,16 @@ const MainAboutWrap = styled.div`
   max-width: 830px;
   margin: 0px auto;
   margin-top: 208px;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    max-width: 670px;
+  }
 `;
 
 const MainAboutTitleWrap = styled.div`
@@ -35,11 +41,16 @@ const MainAboutTitlebar = styled.div`
 `;
 
 const MainAboutTextWrap = styled.div`
-  color: white;
   font-size: 18px;
 
   font-family: "Noto Sans KR";
   font-weight: 400;
+
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 `;
 
 const MainAbout = () => {

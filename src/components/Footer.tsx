@@ -7,6 +7,8 @@ const FooterWrap = styled.div`
   max-width: 830px;
   margin: 0px auto;
   margin-top: 208px;
+  padding: 0 20px;
+  box-sizing: border-box;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -20,6 +22,11 @@ const FooterLinks = styled.div`
 const FooterLink = styled.a`
   width: 40px;
   height: 40px;
+
+  @media (max-width: 1000px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 const FooterLinkImg = styled.img`
   width: 100%;
@@ -30,12 +37,20 @@ const FooterEmail = styled.div`
   font-size: 13px;
   font-family: "Noto Sans KR";
   font-weight: 400;
+
+  @media (max-width: 1000px) {
+    font-size: 11px;
+  }
 `;
 const FooterRight = styled.div`
   color: white;
   font-size: 15px;
   font-family: "Noto Sans KR";
   font-weight: 400;
+
+  @media (max-width: 1000px) {
+    font-size: 13px;
+  }
 `;
 
 const Footer = () => {
