@@ -6,7 +6,8 @@ const MainHeadWrap = styled.div`
   width: 100%;
   max-width: 830px;
   margin: 0px auto;
-  margin-top: 208px;
+  /* margin-top: 208px; */
+  margin-top: 150px;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
@@ -63,6 +64,7 @@ const MainHeadBtnWrap = styled.div`
   align-items: center;
   font-family: "Noto Sans KR";
   font-weight: 400;
+  cursor: pointer;
 
   @media (max-width: 1000px) {
     width: 150px;
@@ -76,7 +78,17 @@ const MainHeadNotionResume = styled.a`
 
 const MainHeadContinueBtn = styled.div``;
 
-const MainHead = () => {
+const MainHead = ({
+  aboutRef,
+}: {
+  aboutRef: React.RefObject<HTMLHeadingElement>;
+}) => {
+  const scrollToAbout = () =>
+    aboutRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
   return (
     <MainHeadWrap>
       <MainHeadLogoWrap>
@@ -93,7 +105,7 @@ const MainHead = () => {
             Notion 이력서 보기
           </MainHeadNotionResume>
         </MainHeadBtnWrap>
-        <MainHeadBtnWrap>
+        <MainHeadBtnWrap onClick={scrollToAbout}>
           <MainHeadContinueBtn>더 훑어보기</MainHeadContinueBtn>
         </MainHeadBtnWrap>
       </MainHeadBtns>

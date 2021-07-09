@@ -30,14 +30,14 @@ const MainSkillsTitleWrap = styled.div`
 `;
 
 const MainSkillsTitle = styled.div`
-  color: #f2c94c;
+  color: #fff;
   font-size: 40px;
   font-family: "Noto Sans KR";
   font-weight: 700;
 `;
 const MainSkillsTitleBar = styled.div`
   width: 100%;
-  height: 8px;
+  height: 4px;
   background-color: #c4c4c4;
 `;
 

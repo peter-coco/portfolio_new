@@ -29,14 +29,14 @@ const MainAboutTitleWrap = styled.div`
   margin-bottom: 64px;
 `;
 const MainAboutTitle = styled.div`
-  color: #f2c94c;
+  color: #fff;
   font-size: 40px;
   font-family: "Noto Sans KR";
   font-weight: 700;
 `;
 const MainAboutTitlebar = styled.div`
   width: 240px;
-  height: 8px;
+  height: 4px;
   background-color: #c4c4c4;
 `;
 

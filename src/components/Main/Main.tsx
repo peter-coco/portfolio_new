@@ -24,7 +24,7 @@ const Main = ({
 }) => {
   return (
     <MainWrap>
-      <MainHead />
+      <MainHead aboutRef={aboutRef} />
       <MainAbout aboutRef={aboutRef} />
       <MainSkills skillsRef={skillsRef} />
       <MainWorks worksRef={worksRef} />
