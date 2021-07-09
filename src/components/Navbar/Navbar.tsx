@@ -35,13 +35,28 @@ const NavbarLogo = styled.img`
   height: 100%;
 `;
 
-const Navbar = () => {
+const Navbar = ({
+  skillsRef,
+  aboutRef,
+  worksRef,
+  carrerRef,
+}: {
+  skillsRef: React.RefObject<HTMLHeadingElement>;
+  aboutRef: React.RefObject<HTMLHeadingElement>;
+  worksRef: React.RefObject<HTMLHeadingElement>;
+  carrerRef: React.RefObject<HTMLHeadingElement>;
+}) => {
   return (
     <NavbarWrap>
       <NavbarLogoWrap>
         <NavbarLogo src={navbarLogo} />
       </NavbarLogoWrap>
-      <NavbarMenus />
+      <NavbarMenus
+        skillsRef={skillsRef}
+        aboutRef={aboutRef}
+        worksRef={worksRef}
+        carrerRef={carrerRef}
+      />
       <NavbarOnOffMenuBtn />
     </NavbarWrap>
   );

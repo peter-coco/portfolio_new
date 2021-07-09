@@ -36,9 +36,13 @@ const MainWorksTitleBar = styled.div`
   background-color: #c4c4c4;
 `;
 
-const MainWorks = () => {
+const MainWorks = ({
+  worksRef,
+}: {
+  worksRef: React.RefObject<HTMLHeadingElement>;
+}) => {
   return (
-    <MainWorksWrap>
+    <MainWorksWrap ref={worksRef}>
       <MainWorksTitleWrap>
         <MainWorksTitle>WORKS</MainWorksTitle>
         <MainWorksTitleBar />

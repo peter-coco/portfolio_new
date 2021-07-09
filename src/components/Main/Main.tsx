@@ -11,14 +11,24 @@ const MainWrap = styled.div`
   width: 100%;
 `;
 
-const Main = () => {
+const Main = ({
+  skillsRef,
+  aboutRef,
+  worksRef,
+  carrerRef,
+}: {
+  skillsRef: React.RefObject<HTMLHeadingElement>;
+  aboutRef: React.RefObject<HTMLHeadingElement>;
+  worksRef: React.RefObject<HTMLHeadingElement>;
+  carrerRef: React.RefObject<HTMLHeadingElement>;
+}) => {
   return (
     <MainWrap>
       <MainHead />
-      <MainAbout />
-      <MainSkills />
-      <MainWorks />
-      <MainCarrer />
+      <MainAbout aboutRef={aboutRef} />
+      <MainSkills skillsRef={skillsRef} />
+      <MainWorks worksRef={worksRef} />
+      <MainCarrer carrerRef={carrerRef} />
     </MainWrap>
   );
 };

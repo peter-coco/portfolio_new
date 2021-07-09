@@ -53,9 +53,13 @@ const MainAboutTextWrap = styled.div`
   box-sizing: border-box;
 `;
 
-const MainAbout = () => {
+const MainAbout = ({
+  aboutRef,
+}: {
+  aboutRef: React.RefObject<HTMLHeadingElement>;
+}) => {
   return (
-    <MainAboutWrap>
+    <MainAboutWrap ref={aboutRef}>
       <MainAboutTitleWrap>
         <MainAboutTitle>ABOUT</MainAboutTitle>
         <MainAboutTitlebar></MainAboutTitlebar>

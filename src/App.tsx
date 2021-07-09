@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import logo from "./logo.svg";
 
 import { Provider, useSelector } from "react-redux";
@@ -16,11 +16,26 @@ const BackgroundWrap = styled.div`
 `;
 
 function App() {
+  const skillsRef = useRef<HTMLHeadingElement>(null);
+  const aboutRef = useRef<HTMLHeadingElement>(null);
+  const worksRef = useRef<HTMLHeadingElement>(null);
+  const carrerRef = useRef<HTMLHeadingElement>(null);
+
   return (
     <Provider store={store}>
       <BackgroundWrap>
-        <Navbar />
-        <Main />
+        <Navbar
+          skillsRef={skillsRef}
+          aboutRef={aboutRef}
+          worksRef={worksRef}
+          carrerRef={carrerRef}
+        />
+        <Main
+          skillsRef={skillsRef}
+          aboutRef={aboutRef}
+          worksRef={worksRef}
+          carrerRef={carrerRef}
+        />
         <Footer />
       </BackgroundWrap>
     </Provider>

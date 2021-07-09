@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import Actions from "../../redux/actions";
 import { GlobalState } from "../../redux/reducer";
 import MainSkillsList from "./MainSkillsList";
 
@@ -40,11 +41,11 @@ const MainSkillsTitleBar = styled.div`
   background-color: #c4c4c4;
 `;
 
-const MainSkills = () => {
-  const skillsRef = useSelector<GlobalState, typeof useRef>(
-    (state) => state.skillsRef
-  );
-
+const MainSkills = ({
+  skillsRef,
+}: {
+  skillsRef: React.RefObject<HTMLHeadingElement>;
+}) => {
   return (
     <MainSkillsWrap ref={skillsRef}>
       <MainSkillsTitleWrap>

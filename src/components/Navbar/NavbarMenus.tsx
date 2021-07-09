@@ -21,31 +21,51 @@ const NavbarMenu = styled.div`
   color: white;
   font-family: "Noto Sans KR";
   font-weight: 400;
+  cursor: pointer;
 `;
 
-const NavbarMenus = () => {
-  const skillsRef = useSelector<GlobalState, typeof useRef>(
-    (state) => state.skillsRef
-  );
+const NavbarMenus = ({
+  skillsRef,
+  aboutRef,
+  worksRef,
+  carrerRef,
+}: {
+  skillsRef: React.RefObject<HTMLHeadingElement>;
+  aboutRef: React.RefObject<HTMLHeadingElement>;
+  worksRef: React.RefObject<HTMLHeadingElement>;
+  carrerRef: React.RefObject<HTMLHeadingElement>;
+}) => {
+  const scrollToSkills = () =>
+    skillsRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
-  const h1Ref = useRef<HTMLHeadingElement>(null);
+  const scrollToAbout = () =>
+    aboutRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
-  // 클릭하면 이동시키는 로직
-  const handleIndexClick = () =>
-    useLayoutEffect(() => {
-      h1Ref.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  const scrollToWorks = () =>
+    worksRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+  const scrollToCarrer = () =>
+    carrerRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
     });
 
   return (
-    <NavbarMenusWrap ref={h1Ref}>
+    <NavbarMenusWrap>
       {/* <NavbarMenu>HOME</NavbarMenu> */}
-      <NavbarMenu>ABOUT</NavbarMenu>
-      <NavbarMenu>SKILLS</NavbarMenu>
-      <NavbarMenu>WORKS</NavbarMenu>
-      <NavbarMenu>CARRER</NavbarMenu>
+      <NavbarMenu onClick={scrollToAbout}>ABOUT</NavbarMenu>
+      <NavbarMenu onClick={scrollToSkills}>SKILLS</NavbarMenu>
+      <NavbarMenu onClick={scrollToWorks}>WORKS</NavbarMenu>
+      <NavbarMenu onClick={scrollToCarrer}>CARRER</NavbarMenu>
       {/* <NavbarMenu>CONTACT</NavbarMenu> */}
     </NavbarMenusWrap>
   );

@@ -38,9 +38,13 @@ const MainCarrerTitleBar = styled.div`
   background-color: #c4c4c4;
 `;
 
-const MainCarrer = () => {
+const MainCarrer = ({
+  carrerRef,
+}: {
+  carrerRef: React.RefObject<HTMLHeadingElement>;
+}) => {
   return (
-    <MainCarrerWrap>
+    <MainCarrerWrap ref={carrerRef}>
       <MainCarrerTitleWrap>
         <MainCarrerTitle>CARRER</MainCarrerTitle>
         <MainCarrerTitleBar></MainCarrerTitleBar>
