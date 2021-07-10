@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio_new/static/css/main.f6323edd.chunk.css",
+    "main.js": "/portfolio_new/static/js/main.2c4f766c.chunk.js",
+    "main.js.map": "/portfolio_new/static/js/main.2c4f766c.chunk.js.map",
+    "runtime-main.js": "/portfolio_new/static/js/runtime-main.cae93ccf.js",
+    "runtime-main.js.map": "/portfolio_new/static/js/runtime-main.cae93ccf.js.map",
+    "static/js/2.8bc0edc6.chunk.js": "/portfolio_new/static/js/2.8bc0edc6.chunk.js",
+    "static/js/2.8bc0edc6.chunk.js.map": "/portfolio_new/static/js/2.8bc0edc6.chunk.js.map",
+    "static/js/3.7470f94c.chunk.js": "/portfolio_new/static/js/3.7470f94c.chunk.js",
+    "static/js/3.7470f94c.chunk.js.map": "/portfolio_new/static/js/3.7470f94c.chunk.js.map",
+    "index.html": "/portfolio_new/index.html",
+    "static/css/main.f6323edd.chunk.css.map": "/portfolio_new/static/css/main.f6323edd.chunk.css.map",
+    "static/js/2.8bc0edc6.chunk.js.LICENSE.txt": "/portfolio_new/static/js/2.8bc0edc6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/portfolio_new/static/media/OtomanopeeOne-Regular.beeba6bf.ttf",
+    "static/media/main-logo.6d63683e.png": "/portfolio_new/static/media/main-logo.6d63683e.png",
+    "static/media/navbar-logo.18756b0e.png": "/portfolio_new/static/media/navbar-logo.18756b0e.png",
+    "static/media/projects1.3611f022.png": "/portfolio_new/static/media/projects1.3611f022.png",
+    "static/media/projects2.8d963475.png": "/portfolio_new/static/media/projects2.8d963475.png",
+    "static/media/projects3.ae8f0f9d.png": "/portfolio_new/static/media/projects3.ae8f0f9d.png",
+    "static/media/projects4.807d5861.png": "/portfolio_new/static/media/projects4.807d5861.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cae93ccf.js",
+    "static/js/2.8bc0edc6.chunk.js",
+    "static/css/main.f6323edd.chunk.css",
+    "static/js/main.2c4f766c.chunk.js"
+  ]
+}
