@@ -1,70 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-// #navbar-menuBtn,
-// #navbar-menuBtn-active {
-//   display: none;
-//   position: absolute;
-//   top: 50px;
-//   right: 10%;
-//   width: 34px;
-//   height: 24px;
-//   background: transparent;
-//   font-size: 0px;
-//   transition: all 0.3s ease 0s;
-// }
-
-// #navbar-menuBtn > i {
-//   display: block;
-//   position: absolute;
-//   left: 0px;
-//   width: 100%;
-//   height: 2px;
-//   background: #fff;
-// }
-
-// #navbar-menuBtn > i:nth-of-type(1) {
-//   top: 0px;
-//   transition: all 0.3s ease;
-//   transition-property: top, transform;
-//   transition-delay: 0.3s, 0s;
-// }
-
-// #navbar-menuBtn > i:nth-of-type(2) {
-//   top: 50%;
-//   margin-top: -1px;
-//   transition: background 0.3s ease 0s;
-// }
-
-// #navbar-menuBtn > i:nth-of-type(3) {
-//   top: 22px;
-//   transition: all 0.3s ease;
-//   transition-property: top, transform;
-//   transition-delay: 0.3s, 0s;
-// }
-
-// /* navbar-menu-active */
-
-// #navbar-menuBtn-active > i:nth-of-type(1) {
-//   top: 10px;
-//   transform: rotate(-45deg);
-//   transition: all 0.3s ease;
-//   transition-property: transform, top;
-//   transition-delay: 0.3s, 0s;
-// }
-
-// #navbar-menuBtn-active > i:nth-of-type(2) {
-//   display: none;
-// }
-
-// #navbar-menuBtn-active > i:nth-of-type(3) {
-//   top: 10px;
-//   transform: rotate(45deg);
-//   transition: all 0.3s ease;
-//   transition-property: transform, top;
-//   transition-delay: 0.3s, 0s;
-// }
-
 const NavbarOnOffMenuBtnWrap = styled.div`
   width: 30px;
   height: 20px;
@@ -135,32 +71,34 @@ const MenuBtnBar = styled.i`
 const NavbarOnOffMenuBtn = () => {
   const [menuBtnToggle, setMenuBtnToggle] = useState(false);
 
-  return menuBtnToggle ? (
+  return (
     <NavbarOnOffMenuBtnWrap
       onClick={() => {
         setMenuBtnToggle((pre) => !pre);
-        console.log(menuBtnToggle);
       }}
     >
       <MenuBtn>
-        <MenuBtnBar />
-        <MenuBtnBar />
-        <MenuBtnBar />
+        <MenuBtnBar style={{
+          top: menuBtnToggle ? "10px" : "0px",
+          transform: menuBtnToggle ? "rotate(-45deg)" : "",
+          transition: "all 0.3s ease",
+          transitionProperty: menuBtnToggle ? "transform, top" : "top,transform",
+          transitionDelay: "0.3s, 0s",
+      }}/>
+        <MenuBtnBar style={{
+          top: menuBtnToggle ? "0px" : "50%",
+          transition: "all 0.3s ease",
+          display : menuBtnToggle ? "none" : "block",
+      }}/>
+        <MenuBtnBar style={{
+          top: menuBtnToggle ? "10px" : "20px",
+          transform: menuBtnToggle ? "rotate(45deg)" : "",
+          transition: "all 0.3s ease",
+          transitionProperty: menuBtnToggle ? "transform, top" : "top,transform",
+          transitionDelay: "0.3s, 0s",
+      }}/>
       </MenuBtn>
     </NavbarOnOffMenuBtnWrap>
-  ) : (
-    <NavbarOnOffMenuBtnWrap
-      onClick={() => {
-        setMenuBtnToggle((pre) => !pre);
-        console.log(menuBtnToggle);
-      }}
-    >
-      <MenuBtnActivate>
-        <MenuBtnBar />
-        <MenuBtnBar />
-        <MenuBtnBar />
-      </MenuBtnActivate>
-    </NavbarOnOffMenuBtnWrap>
-  );
+  )
 };
 export default NavbarOnOffMenuBtn;

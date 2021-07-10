@@ -84,7 +84,7 @@ const MainSkillList = ({
       </MainSkillTitleWrap>
       <SkillListWrap>
         {skillList.map((skill) => (
-          <SkillList skill={skill} />
+          <SkillList key={skill} skill={skill} />
         ))}
       </SkillListWrap>
     </MainSkillListWrap>
@@ -95,7 +95,11 @@ const MainSkillsLists = () => {
   return (
     <MainSkillsListsWrap>
       {skillList.map(([title, skills]) => (
-        <MainSkillList title={title as string} skillList={skills as string[]} />
+        <MainSkillList
+          key={title as string}
+          title={title as string}
+          skillList={skills as string[]}
+        />
       ))}
     </MainSkillsListsWrap>
   );
