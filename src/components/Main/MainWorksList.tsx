@@ -17,11 +17,12 @@ const WorksList = styled.div`
   grid-template-columns: 1fr 1fr;
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
+    width : 100%;
+    max-width: 670px;
   }
 
   background-color: #ffffffed;
-  /* opacity: 0.9; */
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
 `;

@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import Actions from '../../redux/actions';
 import { GlobalState } from "../../redux/reducer";
 
 const NavbarMenusWrap = styled.div`
@@ -10,9 +11,13 @@ const NavbarMenusWrap = styled.div`
   align-items: center;
   justify-content: space-around;
   @media (max-width: 1000px) {
+    position : absolute;
+    padding-top : 60px;
+    box-sizing: border-box;
     flex-direction: column;
     gap: 10px;
-    height: 200px;
+    height: 230px;
+    background-color : #1b1b1b;
   }
 `;
 
@@ -59,8 +64,33 @@ const NavbarMenus = ({
       block: "start",
     });
 
+  const menuBtnToggle = useSelector<GlobalState, boolean>((state)=> state.menubarToggle)
+  const windowWidth = useSelector<GlobalState, number>((state)=> state.windowWidth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    function resizeEventFunc() {
+      dispatch({
+        type : Actions.SET_WINDOW_WIDTH,
+        payload : {windowWidth : window.innerWidth},
+      });
+      
+    }
+
+    window.addEventListener("resize", resizeEventFunc);
+    return () => window.removeEventListener("resize", resizeEventFunc);
+  }, []);
+
   return (
-    <NavbarMenusWrap>
+    <NavbarMenusWrap style ={{
+      opacity: menuBtnToggle ? "1" : windowWidth > 1000 ? "1" : "0",
+      visibility: menuBtnToggle ? "visible" : windowWidth > 1000 ? "visible" : "hidden",
+      clipPath: menuBtnToggle
+          ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" 
+          :  windowWidth > 1000 ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" :"polygon(0 0, 100% 0, 0 0, 0 0)",
+      transition: windowWidth > 1000 ? "" : menuBtnToggle ? "all 300ms" : "",
+      zIndex : menuBtnToggle ? 1 : windowWidth > 1000 ? 1 : 0,
+    }}>
       {/* <NavbarMenu>HOME</NavbarMenu> */}
       <NavbarMenu onClick={scrollToAbout}>ABOUT</NavbarMenu>
       <NavbarMenu onClick={scrollToSkills}>SKILLS</NavbarMenu>

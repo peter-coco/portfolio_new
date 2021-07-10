@@ -14,7 +14,7 @@ const MainCarrerListsWrap = styled.div`
 const CarrerList = styled.div`
   /* color: white; */
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
 `;

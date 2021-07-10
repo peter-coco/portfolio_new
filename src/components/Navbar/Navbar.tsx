@@ -3,12 +3,13 @@ import styled from "styled-components";
 import NavbarMenus from "./NavbarMenus";
 import navbarLogo from "../../image/navbar-logo.png";
 import NavbarOnOffMenuBtn from "./NavbarOnOffMenuBtn";
+import { useSelector } from 'react-redux';
+import { GlobalState } from '../../redux/reducer';
 
 const NavbarWrap = styled.div`
   position: sticky;
   top: 0;
   width: 100%;
-  height: 80px;
   max-width: 830px;
   margin: 0 auto;
   padding: 0 20px;
@@ -19,7 +20,7 @@ const NavbarWrap = styled.div`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    height: 250px;
+    /* height: 250px; */
     padding: 20px 20px;
   }
 `;
@@ -28,6 +29,9 @@ const NavbarLogoWrap = styled.div`
   width: 45px;
   height: 45px;
   @media (max-width: 1000px) {
+    position : absolute;
+    top : 20px;
+    left : 30px;
     margin-bottom: 20px;
   }
 `;
@@ -51,6 +55,7 @@ const Navbar = ({
   const [posY, setPosY] = useState(window.scrollY);
   const posYLimitation = 10;
   // console.log(posY);
+  const menuBtnToggle = useSelector<GlobalState, boolean>((state)=> state.menubarToggle)
 
   useEffect(() => {
     const setScrollY = () => {
@@ -65,6 +70,7 @@ const Navbar = ({
       style={{
         zIndex: posY > posYLimitation ? 1 : 0,
         backgroundColor: posY > posYLimitation ? "#1b1b1b" : "",
+        // height : menuBtnToggle ? "250px" : "80px",
       }}
     >
       <NavbarLogoWrap>

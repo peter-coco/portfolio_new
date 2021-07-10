@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Navbar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
+import BtnGotoTop from "./components/BtnGotoTop";
 
 const BackgroundWrap = styled.div`
   width: 100vw;
@@ -37,6 +38,7 @@ function App() {
           carrerRef={carrerRef}
         />
         <Footer />
+        <BtnGotoTop />
       </BackgroundWrap>
     </Provider>
   );

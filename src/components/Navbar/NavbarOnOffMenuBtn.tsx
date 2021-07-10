@@ -1,38 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import styled from "styled-components";
+import Actions from '../../redux/actions';
+import { GlobalState } from '../../redux/reducer';
 
 const NavbarOnOffMenuBtnWrap = styled.div`
   width: 30px;
   height: 20px;
-`;
-
-const NavbarOnOffMenuBtnWrapActive = styled.div`
-  width: 80px;
-  height: 50px;
-`;
-
-const MenuBtnActivate = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-
-  & > i:nth-of-type(1) {
-    top: 10px;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease;
-    transition-property: transform, top;
-    transition-delay: 0.3s, 0s;
-  }
-  & > i:nth-of-type(2) {
-    display: none;
-  }
-
-  & > i:nth-of-type(3) {
-    top: 10px;
-    transform: rotate(45deg);
-    transition: all 0.3s ease;
-    transition-property: transform, top;
-    transition-delay: 0.3s, 0s;
+  position : absolute;
+  right : 20px;
+  display : none;
+  @media (max-width: 1000px) {
+    right : 30px;
+    top : 30px;
+    display : block;
   }
 `;
 
@@ -69,13 +50,17 @@ const MenuBtnBar = styled.i`
 `;
 
 const NavbarOnOffMenuBtn = () => {
-  const [menuBtnToggle, setMenuBtnToggle] = useState(false);
+  const menuBtnToggle = useSelector<GlobalState, boolean>((state)=> state.menubarToggle)
 
+  const dispatch = useDispatch();
   return (
     <NavbarOnOffMenuBtnWrap
       onClick={() => {
-        setMenuBtnToggle((pre) => !pre);
+        dispatch({
+          type : Actions.TOGGLE_MENU_BAR,
+        })
       }}
+      
     >
       <MenuBtn>
         <MenuBtnBar style={{
