@@ -127,9 +127,16 @@ const NavbarMenus = ({
           ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
           : windowWidth > 1000
           ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-          : "polygon(0 0, 100% 0, 0 0, 0 0)",
+          : "polygon(0 0, 100% 0, 100% 0, 0 0)",
         height: windowWidth > 1000 ? "70px" : menuBtnToggle ? "230px" : "0px",
-        transition: windowWidth > 1000 ? "" : menuBtnToggle ? "all 300ms" : "",
+        transition:
+          windowWidth > 1000
+            ? menuBtnToggle
+              ? ""
+              : ""
+            : menuBtnToggle
+            ? "all 300ms"
+            : "all 300ms",
         zIndex: menuBtnToggle ? 1 : windowWidth > 1000 ? 1 : 0,
       }}
     >
