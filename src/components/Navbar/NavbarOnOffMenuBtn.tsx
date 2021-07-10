@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import Actions from '../../redux/actions';
-import { GlobalState } from '../../redux/reducer';
+import Actions from "../../redux/actions";
+import { GlobalState } from "../../redux/reducer";
 
 const NavbarOnOffMenuBtnWrap = styled.div`
   width: 30px;
   height: 20px;
-  position : absolute;
-  right : 20px;
-  display : none;
+  position: absolute;
+  right: 20px;
+  display: none;
   @media (max-width: 1000px) {
-    right : 30px;
-    top : 30px;
-    display : block;
+    right: 30px;
+    top: 30px;
+    display: block;
+    z-index: 2;
+    cursor: pointer;
   }
 `;
 
@@ -50,40 +52,51 @@ const MenuBtnBar = styled.i`
 `;
 
 const NavbarOnOffMenuBtn = () => {
-  const menuBtnToggle = useSelector<GlobalState, boolean>((state)=> state.menubarToggle)
+  const menuBtnToggle = useSelector<GlobalState, boolean>(
+    (state) => state.menubarToggle
+  );
 
   const dispatch = useDispatch();
   return (
     <NavbarOnOffMenuBtnWrap
       onClick={() => {
         dispatch({
-          type : Actions.TOGGLE_MENU_BAR,
-        })
+          type: Actions.TOGGLE_MENU_BAR,
+        });
       }}
-      
     >
       <MenuBtn>
-        <MenuBtnBar style={{
-          top: menuBtnToggle ? "10px" : "0px",
-          transform: menuBtnToggle ? "rotate(-45deg)" : "",
-          transition: "all 0.3s ease",
-          transitionProperty: menuBtnToggle ? "transform, top" : "top,transform",
-          transitionDelay: "0.3s, 0s",
-      }}/>
-        <MenuBtnBar style={{
-          top: menuBtnToggle ? "0px" : "50%",
-          transition: "all 0.3s ease",
-          display : menuBtnToggle ? "none" : "block",
-      }}/>
-        <MenuBtnBar style={{
-          top: menuBtnToggle ? "10px" : "20px",
-          transform: menuBtnToggle ? "rotate(45deg)" : "",
-          transition: "all 0.3s ease",
-          transitionProperty: menuBtnToggle ? "transform, top" : "top,transform",
-          transitionDelay: "0.3s, 0s",
-      }}/>
+        <MenuBtnBar
+          style={{
+            top: menuBtnToggle ? "10px" : "0px",
+            transform: menuBtnToggle ? "rotate(-45deg)" : "",
+            transition: "all 0.3s ease",
+            transitionProperty: menuBtnToggle
+              ? "transform, top"
+              : "top,transform",
+            transitionDelay: "0.3s, 0s",
+          }}
+        />
+        <MenuBtnBar
+          style={{
+            top: menuBtnToggle ? "0px" : "50%",
+            transition: "all 0.3s ease",
+            display: menuBtnToggle ? "none" : "block",
+          }}
+        />
+        <MenuBtnBar
+          style={{
+            top: menuBtnToggle ? "10px" : "20px",
+            transform: menuBtnToggle ? "rotate(45deg)" : "",
+            transition: "all 0.3s ease",
+            transitionProperty: menuBtnToggle
+              ? "transform, top"
+              : "top,transform",
+            transitionDelay: "0.3s, 0s",
+          }}
+        />
       </MenuBtn>
     </NavbarOnOffMenuBtnWrap>
-  )
+  );
 };
 export default NavbarOnOffMenuBtn;

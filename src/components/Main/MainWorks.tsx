@@ -13,6 +13,7 @@ const MainWorksWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 100px;
 `;
 const MainWorksTitleWrap = styled.div`
   width: 240px;

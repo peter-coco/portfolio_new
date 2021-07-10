@@ -16,6 +16,7 @@ const MainSkillsWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 100px;
 `;
 
 const MainSkillsTitleWrap = styled.div`

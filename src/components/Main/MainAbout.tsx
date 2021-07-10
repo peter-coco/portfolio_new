@@ -12,6 +12,7 @@ const MainAboutWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 100px;
 
   @media (max-width: 1000px) {
     max-width: 670px;

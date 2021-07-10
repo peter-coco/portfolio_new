@@ -13,6 +13,7 @@ const MainCarrerWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 100px;
 `;
 
 const MainCarrerTitleWrap = styled.div`

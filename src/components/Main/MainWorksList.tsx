@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import project1 from "../../image/projects3.png";
+import project1 from "../../image/projects1.png";
+import project2 from "../../image/projects2.png";
+import project3 from "../../image/projects3.png";
+import project4 from "../../image/projects4.png";
 
 const MainWorksListWrap = styled.div`
   width: 100%;
@@ -17,7 +20,7 @@ const WorksList = styled.div`
   grid-template-columns: 1fr 1fr;
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
-    width : 100%;
+    width: 100%;
     max-width: 670px;
   }
 
@@ -101,7 +104,7 @@ const MainWorksList = () => {
     <MainWorksListWrap>
       <WorksList>
         <WorkImages>
-          <WorkImage src={project1} />
+          <WorkImage src={project2} />
         </WorkImages>
         <WorkText>
           <WorkTitle>music player1 with dummy data</WorkTitle>
@@ -121,14 +124,14 @@ const MainWorksList = () => {
           </WorkSubscription>
           <WorkLinks>
             <WorkLink
-              href="https://www.notion.so/PETER-resume-0ce4a691a0ab4e279341ca0520d0327e"
+              href="https://github.com/coco-peter/portfolio_musicPlayer"
               target="_blank"
               title="Github Code"
             >
               <WorkLinkGithub src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567062204/noticon/ttan57gjenhvcrfq10yo.png" />
             </WorkLink>
             <WorkLink
-              href="https://www.notion.so/PETER-resume-0ce4a691a0ab4e279341ca0520d0327e"
+              href="https://coco-peter.github.io/portfolio_musicPlayer/"
               target="_blank"
               title="Deme"
             >
@@ -139,7 +142,7 @@ const MainWorksList = () => {
       </WorksList>
       <WorksList>
         <WorkImages>
-          <WorkImage src={project1} />
+          <WorkImage src={project4} />
         </WorkImages>
         <WorkText>
           <WorkTitle>music player2 with spotify api</WorkTitle>
@@ -188,7 +191,7 @@ const MainWorksList = () => {
       </WorksList>
       <WorksList>
         <WorkImages>
-          <WorkImage src={project1} />
+          <WorkImage src={project3} />
         </WorkImages>
         <WorkText>
           <WorkTitle>독도 재단 landing Page</WorkTitle>
@@ -234,7 +237,7 @@ const MainWorksList = () => {
           </WorkSubscription>
           <WorkLinks>
             <WorkLink
-              href=" https://github.com/coco-peter/dokdoLandingPage"
+              href="https://github.com/coco-peter/portfolio_new"
               target="_blank"
               title="Github Code"
             >

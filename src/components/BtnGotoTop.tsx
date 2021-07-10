@@ -1,29 +1,27 @@
-
-import { useCallback } from 'react';
-import styled from "styled-components"
+import { useCallback, useEffect, useState } from "react";
+import styled from "styled-components";
 
 const BtnGotoTopWrap = styled.div`
-    position : fixed;
-    bottom : 30px;
-    right : 30px;
-    width : 40px;
-    height : 40px;
-    /* padding : 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  /* padding : 20px;
     box-sizing: border-box; */
-    background: #000000;
-    border-radius: 50%;
-
+  background: #000000;
+  border-radius: 50%;
 `;
 const BtnGotoTopArrow = styled.div`
-    display : flex;
-    width : 100%;
-    height : 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
 `;
 const BtnGotoTopArrowLeft = styled.div`
   position: relative;
   /* left: -4px; */
   top: 45%;
-  left : 8px;
+  left: 8px;
   height: 2px;
   width: 14px;
   background-color: #fff;
@@ -32,8 +30,8 @@ const BtnGotoTopArrowLeft = styled.div`
 const BtnGotoTopArrowRight = styled.div`
   position: relative;
   /* left: 6px; */
-  right : -3px;
-  top : 45%;
+  right: -3px;
+  top: 45%;
   height: 2px;
   width: 14px;
   background-color: #fff;
@@ -41,25 +39,38 @@ const BtnGotoTopArrowRight = styled.div`
 `;
 
 const BtnGotoTop = () => {
+  const [posY, setPosY] = useState(window.scrollY);
+  const posYLimitation = 200;
+  useEffect(() => {
+    const setScrollY = () => {
+      setPosY(window.pageYOffset);
+    };
+    window.addEventListener("scroll", setScrollY);
+    return () => window.removeEventListener("scroll", setScrollY);
+  }, []);
 
+  const srolltoTopFunc = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      // left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
-    const srolltoTopFunc = useCallback(() => {
-        window.scrollTo({
-        top: 0,
-        // left: 0,
-        behavior: "smooth",
-        });
-    }, []);
-
-    return (
-        <BtnGotoTopWrap onClick = {srolltoTopFunc}>
-            <BtnGotoTopArrow>
-                <BtnGotoTopArrowLeft />
-                <BtnGotoTopArrowRight />
-            </BtnGotoTopArrow>
-        </BtnGotoTopWrap>
-
-    );
-}
+  return (
+    <BtnGotoTopWrap
+      onClick={srolltoTopFunc}
+      style={{
+        opacity: posY > posYLimitation ? "1" : "0",
+        transition: "opacity 300ms",
+      }}
+    >
+      <BtnGotoTopArrow>
+        <BtnGotoTopArrowLeft />
+        <BtnGotoTopArrowRight />
+      </BtnGotoTopArrow>
+    </BtnGotoTopWrap>
+  );
+};
 
 export default BtnGotoTop;
