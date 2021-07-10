@@ -22,13 +22,13 @@ const CarrerCompany = styled.div`
   font-size: 25px;
   margin-bottom: 10px;
   font-family: "Noto Sans KR";
-  font-weight: 400;
+  font-weight: 700;
 `;
 const CarrerSummary = styled.div`
   font-size: 15px;
   margin-bottom: 15px;
   font-family: "Noto Sans KR";
-  font-weight: 400;
+  font-weight: 700;
 `;
 const CarrerSubscriptionWrap = styled.div`
   display: grid;
