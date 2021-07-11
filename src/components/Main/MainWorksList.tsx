@@ -103,8 +103,8 @@ const WorkLink = styled.a`
 const WorkSubscriptionTitle = styled.div`
   font-family: "Noto Sans KR";
   font-weight: 700;
-  margin-right: 20px;
-  width: 20%;
+  /* margin-right: 20px; */
+  width: 40%;
 `;
 
 const WorkSubscription = styled.div`
@@ -113,7 +113,7 @@ const WorkSubscription = styled.div`
 `;
 
 const WorkSubscriptionContent = styled.div`
-  width: 80%;
+  width: 60%;
 `;
 
 const MainWorksList = () => {

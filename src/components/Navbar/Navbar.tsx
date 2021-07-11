@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import NavbarMenus from "./NavbarMenus";
 import navbarLogo from "../../image/navbar-logo.png";
@@ -29,6 +29,7 @@ const NavbarWrap = styled.div`
 const NavbarLogoWrap = styled.div`
   width: 45px;
   height: 45px;
+  cursor: pointer;
   @media (max-width: 1000px) {
     position: absolute;
     top: 20px;
@@ -65,6 +66,14 @@ const Navbar = ({
     return () => window.removeEventListener("scroll", setScrollY);
   }, []);
 
+  const srolltoTopFunc = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      // left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <NavbarWrap
       style={{
@@ -72,7 +81,7 @@ const Navbar = ({
         backgroundColor: posY > posYLimitation ? "#1b1b1b" : "",
       }}
     >
-      <NavbarLogoWrap>
+      <NavbarLogoWrap onClick={srolltoTopFunc}>
         <NavbarLogo src={navbarLogo} />
       </NavbarLogoWrap>
       <NavbarMenus
