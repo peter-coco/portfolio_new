@@ -7,7 +7,7 @@ const MainHeadWrap = styled.div`
   max-width: 830px;
   margin: 0px auto;
   /* margin-top: 208px; */
-  margin-top: 150px;
+  margin-top: 120px;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
@@ -17,13 +17,15 @@ const MainHeadWrap = styled.div`
 `;
 
 const MainHeadLogoWrap = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  /* height: 300px; */
   margin-bottom: 30px;
 
   @media (max-width: 1000px) {
-    width: 250px;
-    height: 250px;
+    max-width : 100%;
+    height : auto;
+    /* width: 250px; */
+    /* height: 250px; */
     margin-bottom: 15px;
   }
 `;
@@ -57,7 +59,7 @@ const MainHeadBtnWrap = styled.div`
   color: white;
   width: 200px;
   height: 40px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: #000;
   display: flex;
   justify-content: center;
