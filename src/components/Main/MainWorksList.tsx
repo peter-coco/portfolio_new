@@ -103,7 +103,6 @@ const WorkLink = styled.a`
 const WorkSubscriptionTitle = styled.div`
   font-family: "Noto Sans KR";
   font-weight: 700;
-  /* margin-right: 20px; */
   width: 40%;
 `;
 
