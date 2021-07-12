@@ -16,6 +16,11 @@ const BtnGotoTopArrow = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
+  transition: all 500ms;
+  &:hover {
+    transform: translateY(-3px);
+    transition: all 500ms;
+  }
 `;
 const BtnGotoTopArrowLeft = styled.div`
   position: relative;

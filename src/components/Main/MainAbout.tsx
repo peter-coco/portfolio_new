@@ -1,24 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-const MainAboutWrap = styled.div`
-  width: 100%;
-  max-width: 830px;
-  margin: 0px auto;
-  margin-top: 208px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  scroll-margin-top: 100px;
-
-  @media (max-width: 1000px) {
-    max-width: 670px;
-  }
-`;
-
 const MainAboutTitleWrap = styled.div`
   width: 215px;
   height: 70px;
@@ -39,6 +21,7 @@ const MainAboutTitlebar = styled.div`
   width: 240px;
   height: 4px;
   background-color: #c4c4c4;
+  transition: all 500ms;
 `;
 
 const MainAboutTextWrap = styled.div`
@@ -49,15 +32,42 @@ const MainAboutTextWrap = styled.div`
 
   width: 100%;
   background-color: white;
+  border: 5px solid white;
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
+  transition: all 500ms;
+
+  &:hover {
+    /* width: auto; */
+    border: 5px solid #b1303b;
+    transform: translateY(-10px);
+    transition: all 500ms;
+  }
 `;
 
 const MainAboutTextHighlight = styled.span`
   font-family: "Noto Sans KR";
   font-weight: 700;
   color: #b1303b;
+`;
+
+const MainAboutWrap = styled.div`
+  width: 100%;
+  max-width: 830px;
+  margin: 0px auto;
+  margin-top: 208px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 100px;
+
+  @media (max-width: 1000px) {
+    max-width: 670px;
+  }
 `;
 
 const MainAbout = ({

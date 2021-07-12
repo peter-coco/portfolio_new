@@ -30,6 +30,14 @@ const WorksList = styled.div`
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
+  border: 5px solid #ffffffed;
+  transition: all 500ms;
+
+  &:hover {
+    border: 5px solid #7d74ca;
+    transform: translateY(-5px);
+    transition: all 500ms;
+  }
 `;
 const WorkImages = styled.div`
   width: 100%;

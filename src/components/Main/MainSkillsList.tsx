@@ -53,10 +53,18 @@ const SkillListWrap = styled.div`
   background-color: #fff;
   border-radius: 10px;
 
+  border: 5px solid white;
+  transition: all 500ms;
   @media (max-width: 1000px) {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px 20px;
+  }
+
+  &:hover {
+    border: 5px solid #f2c94c;
+    transform: translateY(-5px);
+    transition: all 500ms;
   }
 `;
 const Skill = styled.img`

@@ -17,6 +17,13 @@ const CarrerList = styled.div`
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
+  border: 5px solid #fff;
+  transition: all 500ms;
+  &:hover {
+    border: 5px solid #6e6b8d;
+    transform: translateY(-5px);
+    transition: all 500ms;
+  }
 `;
 const CarrerCompany = styled.div`
   font-size: 25px;
