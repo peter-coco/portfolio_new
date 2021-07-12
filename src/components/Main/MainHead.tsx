@@ -22,15 +22,12 @@ const MainHeadWrap = styled.div`
 
 const MainHeadLogoWrap = styled.div`
   width: 280px;
-  /* height: 300px; */
+  max-width: 100%;
+  height: auto;
   margin-bottom: 30px;
 
   @media (max-width: 1000px) {
-    max-width: 100%;
     width: 180px;
-    height: auto;
-    /* width: 250px; */
-    /* height: 250px; */
     margin-bottom: 15px;
   }
 `;
